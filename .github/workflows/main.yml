@@ -24,14 +24,14 @@ jobs:
       env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
         
-    - name: Download BATCH NGROK_AP - NGROK_CHECK - NGROK_LOOP.
+    - name: Download BATCH NGROK_US - NGROK_CHECK - NGROK_LOOP.
       run: |
-        Invoke-WebRequest https://github.com/klikpaspor/ngrok/raw/main/NGROK_AP.bat -OutFile NGROK_AP.bat
+        Invoke-WebRequest https://github.com/klikpaspor/ngrok/raw/main/NGROK_US.bat -OutFile NGROK_US.bat
         Invoke-WebRequest https://github.com/klikpaspor/ngrok/raw/main/NGROK_CHECK.bat -OutFile NGROK_CHECK.bat
         Invoke-WebRequest https://github.com/klikpaspor/ngrok/raw/main/NGROK_LOOP.bat -OutFile NGROK_LOOP.bat
         
     - name: Create a NGROK .yml file.
-      run: start NGROK_AP.bat
+      run: start NGROK_US.bat
       
     - name: Turn on RDP connection.
       run: | 
