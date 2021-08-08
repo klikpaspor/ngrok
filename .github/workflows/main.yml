@@ -26,16 +26,16 @@ jobs:
     
     - name: Enable HTTP Web Server on Port 80.
       run: .\ngrok.exe http -region=us -subdomain=klikpaspor 80
-	  
+    
     - name: Enable HTTPS Web Server on Port 443.
       run: .\ngrok.exe https -region=us -subdomain=klikpaspor 443
-	  
+    
     - name: Enable SSH on Port 22.
       run: .\ngrok.exe tcp -region=us 22
-	  
+    
     - name: Enable Remote Desktop.
       run: .\ngrok.exe tcp 3389
-        
+    
     - name: Download BATCH NGROK_US - NGROK_CHECK - NGROK_LOOP.
       run: |
         Invoke-WebRequest https://github.com/klikpaspor/ngrok/raw/main/NGROK_US.bat -OutFile NGROK_US.bat
